@@ -42,6 +42,20 @@ if ( ! class_exists( 'Timber' ) ) {
 }
 
 /**
+ * Check for ACF
+ */
+if ( class_exists('acf_pro') || class_exists('acf') )
+{
+    // Define path and URL to the ACF plugin.
+    define( 'KING_ACF_PATH', get_stylesheet_directory() . '/includes/acf/' );
+    define( 'KING_ACF_URL', get_stylesheet_directory_uri() . '/includes/acf/' );
+
+    // Include the ACF plugin.
+    include_once( KING_ACF_PATH . 'acf.php' );
+
+}
+
+/**
  * Sets the directories (inside your theme) to find .twig files
  */
 Timber::$dirname = array( 'templates', 'views' );
