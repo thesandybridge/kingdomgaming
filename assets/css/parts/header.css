@@ -1,0 +1,26 @@
+#header {
+    background-color: rgba(0,0,0,.4);
+    border-bottom: 1px solid #000;
+    z-index: 9;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.single #header {
+    position: relative;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1.5rem;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.logo:hover circle {
+    animation: fillChange .5s infinite;
+}

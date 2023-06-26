@@ -1,0 +1,38 @@
+.breadcrumbs-nav {
+    background-color: var(--wp--preset--color--kingdom-charcoal);
+}
+
+.breadcrumbs {
+    color: var(--wp--preset--color--kingdom-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    list-style: none;
+    display: flex;
+    padding: 1rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.breadcrumb-divider {
+    margin: 0 5px;
+}
+
+.breadcrumbs a::after {
+    content: "";
+    border-bottom: 1px solid;
+    display: block;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .25s ease;
+}
+
+.breadcrumbs a:hover::after {
+    width: 100%;
+}
+
+.breadcrumbs li:last-child {
+    color: var(--wp--preset--color--kingdom-red);
+}

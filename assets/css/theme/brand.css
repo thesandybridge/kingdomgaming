@@ -1,0 +1,50 @@
+@keyframes fillChange {
+  0% {
+    fill: var(--wp--preset--color--black);
+  }
+  14% {
+    fill: var(--wp--preset--color--kingdom-pink);
+  }
+  28% {
+    fill: var(--wp--preset--color--kingdom-blue);
+  }
+  42% {
+    fill: var(--wp--preset--color--kingdom-indigo);
+  }
+  56% {
+    fill: var(--wp--preset--color--kingdom-salmon);
+  }
+  70% {
+    fill: var(--wp--preset--color--kingdom-red);
+  }
+  100% {
+    fill: var(--wp-preset--color--white);
+  }
+}
+
+hr.stripes {
+    background-image: linear-gradient(var(--wp--preset--color--kingdom-gold) 0,var(--wp--preset--color--kingdom-gold) 50%,var(--wp--preset--color--black) 50%,var(--wp--preset--color--black) 100%);
+    height: 8px;
+    border: none;
+    margin: 0;
+}
+
+svg {
+    fill: var(--wp--preset--color--kingdom-gold);
+}
+
+.linked-svg svg:hover {
+    animation: fillChange .5s infinite;
+}
+
+[target="_blank"]:not(.linked-svg, .menu-item > a)::after {
+    background-color: var(--white);
+    content: "";
+    width: 10px;
+    height: 10px;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 3.5V14.5H12.5V10H14V15C14 15.5523 13.5523 16 13 16H1C0.447716 16 0 15.5523 0 15V3C0 2.44772 0.447715 2 1 2H6V3.5H1.5Z' fill='%23FBFBFE'/%3E%3Cpath d='M15.9217 1.17828L7.01473 10.0853L5.95407 9.02462L14.8611 0.117624L15.9217 1.17828Z' fill='%23FBFBFE'/%3E%3Cpath d='M7.5 0H16V1.5H7.5V0Z' fill='%23FBFBFE'/%3E%3Cpath d='M16 0L16 8.5L14.5 8.5L14.5 -6.55671e-08L16 0Z' fill='%23FBFBFE'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 3.5V14.5H12.5V10H14V15C14 15.5523 13.5523 16 13 16H1C0.447716 16 0 15.5523 0 15V3C0 2.44772 0.447715 2 1 2H6V3.5H1.5Z' fill='%23FBFBFE'/%3E%3Cpath d='M15.9217 1.17828L7.01473 10.0853L5.95407 9.02462L14.8611 0.117624L15.9217 1.17828Z' fill='%23FBFBFE'/%3E%3Cpath d='M7.5 0H16V1.5H7.5V0Z' fill='%23FBFBFE'/%3E%3Cpath d='M16 0L16 8.5L14.5 8.5L14.5 -6.55671e-08L16 0Z' fill='%23FBFBFE'/%3E%3C/svg%3E");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    display: inline-flex;
+}
