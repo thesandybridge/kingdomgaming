@@ -54,7 +54,7 @@ svg {
 }
 
 [target="_blank"]:not(.linked-svg, .menu-item > a)::after {
-    background-color: var(--white);
+    background-color: var(--wp--preset--color--white);
     content: "";
     width: 10px;
     height: 10px;
