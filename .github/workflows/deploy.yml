@@ -23,7 +23,7 @@ jobs:
         echo "ARTIFACT=temp.zip" >> $GITHUB_ENV
 
     - name: Run deployment script
-      run: .github/workflows/deploy.sh
+      run: .github/workflows/wpengine-deploy.sh
 
   deploy-staging:
     if: github.ref == 'refs/heads/staging'
@@ -43,7 +43,7 @@ jobs:
         echo "ARTIFACT=temp.zip" >> $GITHUB_ENV
 
     - name: Run deployment script
-      run: .github/workflows/deploy.sh
+      run: .github/workflows/wpengine-deploy.sh
 
   deploy-production:
     if: github.ref == 'refs/heads/main'
@@ -63,4 +63,4 @@ jobs:
         echo "ARTIFACT=temp.zip" >> $GITHUB_ENV
 
     - name: Run deployment script
-      run: .github/workflows/deploy.sh
+      run: .github/workflows/wpengine-deploy.sh
