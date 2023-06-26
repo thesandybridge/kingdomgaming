@@ -2,6 +2,18 @@
     --acrylic-blur: 4px;
 }
 
+#hero::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: "";
+    z-index: 1;
+    width: 100%;
+    background-image: url("../../images/flames.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @keyframes fillChange {
   0% {
     fill: var(--wp--preset--color--black);
