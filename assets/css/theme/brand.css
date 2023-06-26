@@ -1,3 +1,7 @@
+:root {
+    --acrylic-blur: 4px;
+}
+
 @keyframes fillChange {
   0% {
     fill: var(--wp--preset--color--black);
@@ -47,4 +51,12 @@ svg {
     -webkit-mask-size: cover;
     mask-size: cover;
     display: inline-flex;
+}
+
+@supports ((-webkit-backdrop-filter: blur(var(--acrylic-blur))) or (backdrop-filter: blur(var(--acrylic-blur)))) {
+    .acrylic {
+        background: rgba(255, 255, 255, 0.5);
+        -webkit-backdrop-filter: blur(var(--acrylic-blur));
+        backdrop-filter: blur(var(--acrylic-blur));
+    }
 }

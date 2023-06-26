@@ -22,7 +22,4 @@ iframe {
 }
 
 @media screen and (max-width: 940px) {
-    .content-wrapper {
-        padding: 1rem;
-    }
 }
