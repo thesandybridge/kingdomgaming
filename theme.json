@@ -70,6 +70,11 @@
                     "name": "Kingdom Charcoal",
                     "slug": "kingdom-charcoal",
                     "color": "#101010"
+                },
+                {
+                    "name": "Grey 900",
+                    "slug": "grey-900",
+                    "color": "#303030"
                 }
             ]
         },
@@ -244,7 +249,7 @@
 		},
         "color": {
             "text": "var(--wp--preset--color--white)",
-            "background": "var(--wp--preset--color--kingdom-charcoal)",
+            "background": "var(--wp--preset--color--grey-900)",
             "gradient": "var(--wp--preset--gradient--dark-gradient)"
         }
     }
