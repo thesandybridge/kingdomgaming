@@ -8,6 +8,13 @@
             "defaultPalette": false,
             "link": true,
             "background": true,
+            "gradients": [
+                {
+                    "name": "Dark Gradient",
+                    "slug": "dark-gradient",
+                    "gradient": "linear-gradient(0deg,#212121 25%,#000 75%)"
+                }
+            ],
             "palette": [
                 {
                     "name": "Black",
@@ -31,43 +38,43 @@
                 },
                 {
                     "name": "Kingdom Red",
-                    "slug": "kindgom-red",
+                    "slug": "kingdom-red",
                     "color": "#ff6b6b"
                 },
                 {
                     "name": "Kingdom Salmon",
-                    "slug": "kindgom-salmon",
+                    "slug": "kingdom-salmon",
                     "color": "#c96480"
                 },
                 {
                     "name": "Kingdom Indigo",
-                    "slug": "kindgom-indigo",
+                    "slug": "kingdom-indigo",
                     "color": "#89aae6"
                 },
                 {
-                    "name": "Kindgom Blue",
-                    "slug": "kindgom-blue",
+                    "name": "Kingdom Blue",
+                    "slug": "kingdom-blue",
                     "color": "#9ae5e6"
                 },
                 {
-                    "name": "Kindgom Navy",
-                    "slug": "kindgom-navy",
+                    "name": "Kingdom Navy",
+                    "slug": "kingdom-navy",
                     "color": "#020a1d"
                 },
                 {
-                    "name": "Kindgom Charcoal",
-                    "slug": "kindgom-charcoal",
+                    "name": "Kingdom Charcoal",
+                    "slug": "kingdom-charcoal",
                     "color": "#101010"
                 }
             ]
         },
         "blocks": {
-                "core/columns": {
-                    "spacing": {
-                        "margin": true,
-                        "padding": true
-                    }
+            "core/columns": {
+                "spacing": {
+                    "margin": true,
+                    "padding": true
                 }
+            }
         },
         "layout": {
             "contentSize": "900px",
@@ -100,8 +107,135 @@
                     "slug": "medium",
                     "size": "1rem"
                 }
+            ],
+            "fontFamilies": [
+                {
+                    "name": "Titilium",
+                    "slug": "titilium",
+                    "fontFamily": "Titlium, sans-serif",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Titilium",
+                            "src": ["https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Industry",
+                    "slug": "industry",
+                    "fontFamily": "Industry, sans-serif",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Industry",
+                            "src": ["https://use.typekit.net/dko6epv.css"]
+                        }
+                    ]
+                }
             ]
+        }
+    },
+    "styles": {
+        "elements": {
+            "button": {
+                "spacing": {
+                    "padding": {
+                        "top": "1rem",
+                        "right": "1rem",
+                        "bottom": "1rem",
+                        "left": "1rem"
+                    }
+                },
+                "typography": {
+                    "fontSize": "1rem",
+                    "letterSpacing": ".1rem",
+                    "textTransform": "uppercase",
+                    "fontWeight": "700"
+                },
+                "color": {
+                    "text": "var(--wp--preset--color--kingdom-gold)",
+                    "background": "transparent"
+                },
+                "border": {
+                    "color": "var(--wp--preset--color--kingdom-gold)",
+                    "width": "2px",
+                    "style": "solid",
+                    "radius": {
+                        "topLeft": "0",
+                        "topRight": "0",
+                        "bottomLeft": "0",
+                        "bottomRight": "0"
+                    }
+                },
+                ":hover": {
+                    "color": {
+                        "background": "var(--wp--preset--color--kingdom-gold)",
+                        "text": "var(--wp--preset--color--kingdom-charcoal)"
+                    }
+                },
+                ":focus": {
+                    "color": {
+                        "background": "var(--wp--preset--color--kingdom-gold)",
+                        "text": "var(--wp--preset--color--kingdom-charcoal)"
+                    }
+                },
+                ":active": {
+                    "color": {
+                        "background": "var(--wp--preset--color--kingdom-gold)",
+                        "text": "var(--wp--preset--color--kingdom-charcoal)"
+                    }
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "var(--wp--preset--color--kingdom-gold)"
+                }
+            },
+            "h1": {
+				"typography": {
+                    "fontSize": "2rem",
+                    "lineHeight": "1"
+				}
+			},
+			"h2": {
+				"typography": {
+                    "fontSize": "1.875rem",
+                    "lineHeight": "1"
+				}
+			},
+			"h3": {
+				"typography": {
+                    "fontSize": "1.5rem",
+                    "lineHeight": "1"
+				}
+			},
+			"h4": {
+				"typography": {
+                    "fontSize": "1.25rem",
+                    "lineHeight": "1"
+				}
+			},
+			"h5": {
+				"typography": {
+                    "fontSize": "1rem",
+                    "lineHeight": "1.125"
+				}
+			},
+			"h6": {
+				"typography": {
+                    "fontSize": "1rem",
+                    "lineHeight": "1"
+				}
+			}
+        },
+        "typography": {
+			"fontFamily": "var(--wp--preset--font-family--industry)",
+            "fontSize": "1rem",
+            "lineHeight": "2rem"
+		},
+        "color": {
+            "text": "var(--wp--preset--color--white)",
+            "background": "var(--wp--preset--color--kingdom-charcoal)",
+            "gradient": "var(--wp--preset--gradient--dark-gradient)"
         }
     }
 }
-

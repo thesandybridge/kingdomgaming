@@ -3,8 +3,8 @@
     "title": "Mods",
     "menu_order": 0,
     "active": true,
-    "post_type": "mods",
-    "advanced_configuration": false,
+    "post_type": "mod",
+    "advanced_configuration": true,
     "import_source": "",
     "import_date": "",
     "labels": {
@@ -64,6 +64,7 @@
     "supports": [
         "title",
         "editor",
+        "excerpt",
         "thumbnail"
     ],
     "taxonomies": [
@@ -84,5 +85,5 @@
     "can_export": true,
     "delete_with_user": false,
     "register_meta_box_cb": "",
-    "modified": 1687729902
+    "modified": 1687743193
 }
