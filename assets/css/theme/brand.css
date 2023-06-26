@@ -53,8 +53,9 @@ svg {
     animation: fillChange .5s infinite;
 }
 
-[target="_blank"]:not(.linked-svg, .menu-item > a)::after {
-    background-color: var(--wp--preset--color--white);
+[target="_blank"]:not(.linked-svg, .menu-item > a):hover::after {
+    background-color: currentColor;
+    position: absolute;
     content: "";
     width: 10px;
     height: 10px;
