@@ -6,13 +6,38 @@ a {
     line-height: normal;
 }
 
-.content-wrapper {
-   padding: 0 1rem;
-}
-
 .content-wrapper-single {
    max-width: 900px;
    margin: 0 auto;
+}
+
+#header {
+    background-color: rgba(0,0,0,.4);
+    border-bottom: 1px solid #000;
+    z-index: 9;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1.5rem;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+nav ul .menu-item {
+    display: flex;
 }
 
 hr.stripes {
@@ -56,8 +81,12 @@ iframe {
     aspect-ratio: 16/9;
 }
 
-.mod_meta svg {
+svg {
     fill: var(--wp--preset--color--kingdom-gold);
+}
+
+.logo:hover circle {
+    animation: fillChange .5s infinite;
 }
 
 @keyframes fillChange {
@@ -187,7 +216,7 @@ iframe {
     display: flex;
 }
 
-[target="_blank"]:not(.linked-svg)::after {
+[target="_blank"]:not(.linked-svg, .menu-item > a)::after {
     background-color: var(--white);
     content: "";
     width: 10px;

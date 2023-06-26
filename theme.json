@@ -13,6 +13,11 @@
                     "name": "Dark Gradient",
                     "slug": "dark-gradient",
                     "gradient": "linear-gradient(0deg,#212121 25%,#000 75%)"
+                },
+                {
+                    "name": "Black Gold Gradient",
+                    "slug": "black-gold-gradient",
+                    "gradient": "linear-gradient(#bfa25d 0,#bfa25d 50%,#000 50%,#000 100%)"
                 }
             ],
             "palette": [
@@ -73,6 +78,11 @@
                 "spacing": {
                     "margin": true,
                     "padding": true
+                }
+            },
+            "core/group": {
+                "spacing": {
+                    "blockGap": true
                 }
             }
         },
