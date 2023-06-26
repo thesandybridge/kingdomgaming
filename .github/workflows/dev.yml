@@ -14,4 +14,4 @@ jobs:
       with:
       # Deploy vars
         WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
-        DEV_ENV: kingdomggdev
+        DEV_ENV: kingdomsandbox
