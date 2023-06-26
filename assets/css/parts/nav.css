@@ -3,8 +3,10 @@ nav ul {
     padding: 0;
     display: flex;
     list-style: none;
+    gap: 1rem;
 }
 
 nav ul .menu-item {
     display: flex;
+    align-items: center;
 }
