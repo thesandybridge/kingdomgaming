@@ -1,0 +1,7 @@
+#footer {
+    display: flex;
+    justify-content: center;
+    color: var(--wp--preset--color--kingdom-gold);
+    background: var(--wp--preset--color--kingdom-charcoal);
+    padding: 1rem;
+}
