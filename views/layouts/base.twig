@@ -1,6 +1,6 @@
 {% block html_head_container %}
 
-{% include 'html-header.twig' %}
+{% include 'partials/head.twig' %}
 	{% block head %}
 	{% endblock %}
 	</head>
@@ -9,7 +9,7 @@
 	<body class="{{body_class}}" data-template="base.twig">
 		<a class="skip-link screen-reader-text" href="#kingdomg-gaming-content">{{ _e( 'Skip to content') }}</a>
 		{% block header %}
-            {% include 'header.twig' %}
+            {% include 'layouts/header.twig' %}
 		{% endblock %}
 
         {% block breadcrumbs %}
@@ -23,7 +23,7 @@
 
 		{% block footer %}
 			<footer id="footer">
-				{% include 'footer.twig' %}
+				{% include 'layouts/footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}
