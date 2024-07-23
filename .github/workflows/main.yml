@@ -11,11 +11,19 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Check out repository
+      uses: actions/checkout@v3
+
+    - name: Ensure working directory exists
+      run: |
+        mkdir -p wp-content/themes/${{ github.event.repository.name }}
+      working-directory: wp-content/themes
+
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'
-        extensions: mbstring, intl
+        php-version: '7.4' # Specify the PHP version you need
+        extensions: mbstring, intl # Add any required PHP extensions
 
     - name: Install Composer dependencies
       run: composer install
