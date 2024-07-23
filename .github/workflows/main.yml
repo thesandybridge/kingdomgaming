@@ -15,5 +15,5 @@ jobs:
       with:
       # Deploy vars
         WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
-        DEV_ENV: kingdomggprod
+        WPE_ENV: kingdomgamingp
         REMOTE_PATH: wp-content/themes/${{ github.event.repository.name }}/
