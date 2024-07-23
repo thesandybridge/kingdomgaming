@@ -10,10 +10,21 @@ jobs:
     environment: Production
     steps:
     - uses: actions/checkout@v3
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        extensions: mbstring, intl
+
+    - name: Install Composer dependencies
+      run: composer install
+      working-directory: wp-content/themes/${{ github.event.repository.name }} # Adjust the path if needed
+
     - name: GitHub Action Deploy to WP Engine
       uses: wpengine/github-action-wpe-site-deploy@v3
       with:
-      # Deploy vars
+        # Deploy vars
         WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
         WPE_ENV: kingdomgamingp
         REMOTE_PATH: wp-content/themes/${{ github.event.repository.name }}/
