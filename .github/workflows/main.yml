@@ -16,7 +16,10 @@ jobs:
 
     - name: Ensure working directory exists
       run: |
+        echo "Creating working directory..."
         mkdir -p wp-content/themes/${{ github.event.repository.name }}
+        echo "Directory structure:"
+        ls -R wp-content/themes/
       working-directory: wp-content/themes
 
     - name: Set up PHP
@@ -25,9 +28,16 @@ jobs:
         php-version: '7.4' # Specify the PHP version you need
         extensions: mbstring, intl # Add any required PHP extensions
 
+    - name: Debug - Check directory structure
+      run: |
+        echo "Current working directory:"
+        pwd
+        echo "Directory structure:"
+        ls -R wp-content/themes/${{ github.event.repository.name }}
+
     - name: Install Composer dependencies
       run: composer install
-      working-directory: wp-content/themes/${{ github.event.repository.name }} # Adjust the path if needed
+      working-directory: wp-content/themes/${{ github.event.repository.name }}
 
     - name: GitHub Action Deploy to WP Engine
       uses: wpengine/github-action-wpe-site-deploy@v3
